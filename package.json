@@ -1,5 +1,5 @@
 {
-  "name": "vue-photo-swipe",
+  "name": "vue-image-swipe",
   "version": "1.0.0",
   "description": "基于photoswipe的vue预览组件",
   "main": "dist/vue-photo-swipe.js",
