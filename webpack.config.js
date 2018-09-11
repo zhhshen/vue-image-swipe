@@ -9,10 +9,13 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin")
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin")
 let config = {
   context: __dirname,
-  entry: './src/index.js',
+  entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
     filename: 'vue-photo-swipe.js',
+    library: 'VuePhotoSwipe',
+    libraryTarget: 'umd',
+    umdNamedDefine: true
   },
   resolve: {
     extensions: ['.js', '.json', '.vue'],
@@ -113,7 +116,7 @@ module.exports = (env, argv) => {
         new CleanWebpackPlugin(['dist']),
         new MiniCssExtractPlugin({
           filename: 'css/vue-photo-swipe.css',
-          chunkFilename: 'css/app.[contenthash:12].css'  // use contenthash *
+          chunkFilename: 'css/[contenthash:12].css'  // use contenthash *
         })
       ]
     })

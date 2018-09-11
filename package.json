@@ -1,8 +1,8 @@
 {
   "name": "vue-photo-swipe",
   "version": "1.0.0",
-  "description": "预览组件",
-  "main": "index.js",
+  "description": "基于photoswipe的vue预览组件",
+  "main": "dist/vue-photo-swipe.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --inline --hotOnly",
     "build": "webpack --mode production",
@@ -13,10 +13,12 @@
     "url": "git+https://github.com/zhhshen/vue-photo-swipe.git"
   },
   "keywords": [
-    "photoswipe"
+    "photoswipe",
+    "vue",
+    "webpack"
   ],
   "author": "zhhshen",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/zhhshen/vue-photo-swipe/issues"
   },
