@@ -2,7 +2,7 @@
   "name": "vue-image-swipe",
   "version": "1.0.0",
   "description": "基于photoswipe的vue预览组件",
-  "main": "dist/vue-photo-swipe.js",
+  "main": "dist/vue-image-swipe.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open --inline --hotOnly",
     "build": "webpack --mode production",

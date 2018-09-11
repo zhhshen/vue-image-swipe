@@ -1,4 +1,4 @@
-# vue-photo-swipe
+# vue-image-swipe
 
 基于photoswipe实现的vue图片预览组件
 
@@ -6,16 +6,16 @@
 
 1 第一步
 ```
-npm instatll VuePhotoSwipe -D
+npm instatll vue-image-swipe -D
 ```
 2 第二步
 
 vue 入口文件
 ``` javascript
 import Vue from 'vue'
-import VuePhotoSwipe from 'vue-photo-swipe'
-import 'VuePhotoSwipe/dist/vue-photo-swipe.css'
-Vue.use(VuePhotoSwipe)
+import VueImageSwipe from 'vue-image-swipe'
+import 'VueImageSwipe/dist/vue-image-swipe.css'
+Vue.use(VueImageSwipe)
 ```
 
 ### 使用
@@ -27,14 +27,14 @@ Vue.use(VuePhotoSwipe)
   <div>
     <ul>
       <li
-        :key="index" 
+        :key="index"
         @click="preview(index)"
         v-for="(l, index) in images">
-         <img :src="l" alt=""> 
+         <img :src="l" alt="">
       </li>
     </ul>
   </div>
-</div> 
+</div>
 </template>
 <script>
 export default {
@@ -66,7 +66,7 @@ export default {
 ```
 ### demo
 
-[demo](https://zhhshen.github.io/vue-photo-swipe/example/index.html)
+[demo](https://zhhshen.github.io/vue-image-swipe/example/index.html)
 ###  LICENSE
 
 MIT

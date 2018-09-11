@@ -12,8 +12,8 @@ let config = {
   entry: './src/lib/index.js',
   output: {
     path: path.resolve(__dirname, './dist'),
-    filename: 'vue-photo-swipe.js',
-    library: 'VuePhotoSwipe',
+    filename: 'vue-image-swipe.js',
+    library: 'VueImageSwipe',
     libraryTarget: 'umd',
     umdNamedDefine: true
   },
@@ -115,7 +115,7 @@ module.exports = (env, argv) => {
         // build前执行下清空
         new CleanWebpackPlugin(['dist']),
         new MiniCssExtractPlugin({
-          filename: 'css/vue-photo-swipe.css',
+          filename: 'vue-image-swipe.css',
           chunkFilename: 'css/[contenthash:12].css'  // use contenthash *
         })
       ]

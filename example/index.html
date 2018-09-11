@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>vue图片预览</title>
-  <link rel="stylesheet" href="../dist/css/vue-photo-swipe.css">
+  <link rel="stylesheet" href="../dist/vue-image-swipe.css">
   <script src="https://cdn.bootcss.com/vue/2.5.16/vue.min.js"></script>
-  <script src="../dist/vue-photo-swipe.js"></script>
+  <script src="../dist/vue-image-swipe.js"></script>
   <style>
     * {
       margin: 0;
@@ -42,10 +42,10 @@
     <div class="wrap">
       <ul>
           <li
-            :key="index" 
+            :key="index"
             @click="preview(index)"
             v-for="(l, index) in images">
-              <img :src="l" alt=""> 
+              <img :src="l" alt="">
           </li>
         </ul>
     </div>
@@ -74,7 +74,7 @@
           })
         }
       }
-    }) 
+    })
   </script>
 </body>
 </html>
