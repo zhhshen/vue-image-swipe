@@ -14,7 +14,7 @@ vue 入口文件
 ``` javascript
 import Vue from 'vue'
 import VueImageSwipe from 'vue-image-swipe'
-import 'VueImageSwipe/dist/vue-image-swipe.css'
+import 'vue-image-swipe/dist/vue-image-swipe.css'
 Vue.use(VueImageSwipe)
 ```
 
