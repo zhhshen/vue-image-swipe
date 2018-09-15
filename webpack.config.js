@@ -51,12 +51,13 @@ let config = {
       "postcss-loader"
       ],
     }, {
-      test: /\.(png|jpe?g|gif|svg)$/,
+      test: /\.(png|jpe?g|gif)$/,
       use: [{
         loader: 'file-loader',
         options: {
-          limit: 10000,
-          outputPath: 'images/'
+          limit: 100000,
+          outputPath: 'images/',
+          // useRelativePath: true,
         }
       }]
     }, {
@@ -65,7 +66,7 @@ let config = {
         'html-withimg-loader'
       ]
     }, {
-      test: /\.(eot|ttf|woff|svg)$/,
+      test: /\.(eot|ttf|woff|woff2|svg)$/,
       use: [{
         loader: 'file-loader',
         options: {
@@ -106,7 +107,7 @@ module.exports = (env, argv) => {
           new UglifyJsPlugin({
             cache: true,
             parallel: true,
-            sourceMap: true 
+            sourceMap: true
           }),
           new OptimizeCSSAssetsPlugin({})  // use OptimizeCSSAssetsPlugin
         ]
@@ -120,6 +121,6 @@ module.exports = (env, argv) => {
         })
       ]
     })
-  } 
+  }
   return config
 }
