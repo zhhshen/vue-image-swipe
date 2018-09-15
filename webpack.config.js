@@ -57,7 +57,6 @@ let config = {
         options: {
           limit: 100000,
           outputPath: 'images/',
-          useRelativePath: true,
         }
       }]
     }, {
