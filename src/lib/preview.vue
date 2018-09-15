@@ -48,7 +48,6 @@
   </div>
 </template>
 <script>
-// refer https://github.com/LS1231/vue-preview
 // photoswipe接口文档 http://photoswipe.com/documentation/api.html
 import 'photoswipe/dist/photoswipe.css'
 import 'photoswipe/dist/default-skin/default-skin.css'
