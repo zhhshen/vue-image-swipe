@@ -6,7 +6,7 @@
 
 1 第一步
 ```
-npm instatll vue-image-swipe -D
+npm install vue-image-swipe -D
 ```
 2 第二步
 
