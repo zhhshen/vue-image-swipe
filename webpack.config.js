@@ -51,13 +51,13 @@ let config = {
       "postcss-loader"
       ],
     }, {
-      test: /\.(png|jpe?g|gif)$/,
+      test: /\.(png|jpe?g|gif|svg)$/,
       use: [{
         loader: 'file-loader',
         options: {
           limit: 100000,
           outputPath: 'images/',
-          // useRelativePath: true,
+          useRelativePath: true,
         }
       }]
     }, {
@@ -65,16 +65,18 @@ let config = {
       use: [
         'html-withimg-loader'
       ]
-    }, {
-      test: /\.(eot|ttf|woff|woff2|svg)$/,
-      use: [{
-        loader: 'file-loader',
-        options: {
-          name: 'fonts/[name].[ext]',
-          publicPath:'./'
-        }
-      }]
-    }]
+    },
+    // {
+    //   test: /\.(eot|ttf|woff|woff2|svg)$/,
+    //   use: [{
+    //     loader: 'file-loader',
+    //     options: {
+    //       name: 'fonts/[name].[ext]',
+    //       publicPath:'./'
+    //     }
+    //   }]
+    // }
+    ]
   },
   plugins: [
     new VueLoaderPlugin(),
