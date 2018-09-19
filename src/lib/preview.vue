@@ -78,12 +78,10 @@ export default {
   },
   watch: {
     data(newVal) {
-      if (Array.isArray(newVal)) {
+      if (Array.isArray(newVal) && newVal.length > 0) {
         this.slides = Object.assign([], newVal)
         this.$nextTick(() => {
-          if (this.slides.length > 0) {
-            this.initPhotoSwipe()
-          }
+          this.initPhotoSwipe()
         })
       }
     },
@@ -135,6 +133,10 @@ export default {
       this.gallery.init()
         // Gallery starts closing
       this.gallery.listen('close', () => {
+        if (this.gallery) {
+          this.gallery.close()
+          this.gallery = null
+        }
         that.$emit('close')
       })
     },
@@ -148,7 +150,7 @@ export default {
         let rh = 0
         if(typeof elem.naturalWidth === "undefined") {　　
           // IE 6/7/8
-          const img = new window.Image()　
+          let img = new window.Image()
           img.src = elem.getAttribute('src')
           rw = img.width　　
           rh = img.height
@@ -176,10 +178,5 @@ export default {
   },
 }
 </script>
-<style lang="css" scoped>
-.my-gallery {
-  visibility: hidden;
-}
-</style>
 
 
