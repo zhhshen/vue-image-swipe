@@ -103,8 +103,8 @@ export default {
         arrowEl: true,
         preloaderEl: true,
         loop: false,
-        // bgOpacity: 0.85,
-        // showHideOpacity: true,
+        bgOpacity: 0.85,
+        showHideOpacity: true,
         errorMsg: '<div class="pswp__error-msg">图片加载失败</div>',
       }
       let { options, imageIndex } = this
@@ -178,5 +178,8 @@ export default {
   },
 }
 </script>
-
-
+<style lang="css" scoped>
+.my-gallery {
+  opacity: 0;
+}
+</style>
