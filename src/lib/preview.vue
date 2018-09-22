@@ -1,5 +1,5 @@
 <template>
-<div>
+<div v-if="data.length">
     <div ref="myGallery" class="my-gallery" data-pswp-uid="1">
       <div
         :key="index"
@@ -78,20 +78,22 @@ export default {
   },
   watch: {
     data(newVal) {
-      if (Array.isArray(newVal) && newVal.length > 0) {
+      if (Array.isArray(newVal)) {
         this.slides = Object.assign([], newVal)
-        this.$nextTick(() => {
-          this.initPhotoSwipe()
-        })
+        if (newVal.length > 0) {
+          this.$nextTick(() => {
+            this.initPhotoSwipe()
+          })
+        }
       }
     },
   },
   mounted() {
-    this.$nextTick(() => {
-      if (this.slides.length > 0) {
+    if (this.slides.length > 0) {
+      this.$nextTick(() => {
         this.initPhotoSwipe()
-      }
-    })
+      })
+    }
   },
   methods: {
     /* eslint-disable */
